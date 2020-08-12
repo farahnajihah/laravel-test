@@ -33,6 +33,14 @@
             .position-ref {
                 position: relative;
             }
+			/* Full height image header */
+			.bgimg-1 {
+			  background-position: center;
+			  background-size: cover;
+			  background-image: url("/workbench.jpg");
+			  min-height: 100%;
+			}
+
 
             .top-right {
                 position: absolute;
@@ -68,32 +76,23 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/profile') }}" style="color:white;">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}" style="color:white;">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" style="color:white;">Register</a>
                         @endif
                     @endauth
                 </div>
             @endif
 
-            <div class="content">
+            <div class="content" style="background-image:url('/img/workbench.jpg'); width:100%; height:100%;">
                 <div class="title m-b-md">
-                    Laravel
+                    <h2 style="color:white;"><b>I Net Spatial</b></h2>
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                
             </div>
         </div>
     </body>

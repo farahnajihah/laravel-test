@@ -16,4 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+
+	
 });
+
+Route::post('editProfile', 'ProfileController@editProfile');
+Route::post('addstory', 'ProfileController@addstoryAPI');
+Route::post('updatestory', 'ProfileController@updatestoryAPI');
+Route::delete('deletestory/{id}', 'ProfileController@deletestory');
